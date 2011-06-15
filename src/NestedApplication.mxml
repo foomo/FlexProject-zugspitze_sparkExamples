@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nested:Application
+	xmlns:fx="http://ns.adobe.com/mxml/2009"
+	xmlns:s="library://ns.adobe.com/flex/spark"
+	xmlns:nested="org.foomo.zugspitze.examples.applications.nested.*"
+	minWidth="955"
+	minHeight="600"
+	>
+	<fx:Style source="assets/css/Application.css"/>
+</nested:Application>

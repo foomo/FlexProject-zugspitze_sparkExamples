@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:VGroup
+	xmlns:fx="http://ns.adobe.com/mxml/2009"
+	xmlns:s="library://ns.adobe.com/flex/spark"
+	>
+	<fx:Script>
+		<![CDATA[
+			//-----------------------------------------------------------------------------------------
+			// ~ Includes
+			//-----------------------------------------------------------------------------------------
+
+			include 'ViewInclude.as';
+		]]>
+	</fx:Script>
+	<s:HGroup>
+		<s:TextInput id="input" enter="this.controller.setText(this.input.text)"/>
+		<s:Button label="Submit" click="this.controller.setText(this.input.text)"/>
+	</s:HGroup>
+
+	<s:Label text="{this.model.welcomeText}"/>
+</s:VGroup>
