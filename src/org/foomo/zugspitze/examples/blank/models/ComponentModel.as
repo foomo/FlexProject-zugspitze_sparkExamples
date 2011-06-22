@@ -5,6 +5,12 @@ package org.foomo.zugspitze.examples.blank.models
 	[Bindable]
 	public class ComponentModel extends ZugspitzeModel
 	{
+		//-----------------------------------------------------------------------------------------
+		// ~ Constructor
+		//-----------------------------------------------------------------------------------------
 
+		public function ComponentModel()
+		{
+		}
 	}
 }
