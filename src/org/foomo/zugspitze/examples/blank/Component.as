@@ -3,13 +3,13 @@ package org.foomo.zugspitze.examples.blank
 	import org.foomo.zugspitze.examples.blank.controllers.ComponentController;
 	import org.foomo.zugspitze.examples.blank.models.ComponentModel;
 	import org.foomo.zugspitze.examples.blank.views.ComponentView;
-	import org.foomo.zugspitze.apps.ZuspitzeGroup;
+	import org.foomo.zugspitze.apps.ZugspitzeGroup;
 
 	import flash.events.Event;
 
 	import mx.events.FlexEvent;
 
-	public class Component extends ZuspitzeGroup
+	public class Component extends ZugspitzeGroup
 	{
 		//-----------------------------------------------------------------------------------------
 		// ~ Constructor
