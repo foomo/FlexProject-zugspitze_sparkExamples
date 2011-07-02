@@ -14,39 +14,25 @@
  * You should have received a copy of the GNU Lesser General Public License along with
  * the foomo Opensource Framework. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.foomo.zugspitze.examples.blank.controllers
+package org.foomo.zugspitze.examples.components.blank.models
 {
-	import org.foomo.zugspitze.examples.blank.models.ComponentModel;
-	import org.foomo.zugspitze.examples.blank.views.ComponentView;
-	import org.foomo.zugspitze.core.ZugspitzeController;
+	import org.foomo.zugspitze.core.ZugspitzeModel;
 
+	[Bindable]
+	
 	/**
 	 * @link    http://www.foomo.org
 	 * @license http://www.gnu.org/licenses/lgpl.txt
 	 * @author  franklin <franklin@weareinteractive.com>
 	 */
-	public class ComponentController extends ZugspitzeController
+	public class ComponentModel extends ZugspitzeModel
 	{
 		//-----------------------------------------------------------------------------------------
-		// ~ Initialize application
+		// ~ Constructor
 		//-----------------------------------------------------------------------------------------
 
-		public function initialize():void
+		public function ComponentModel()
 		{
-		}
-
-		//-----------------------------------------------------------------------------------------
-		// ~ Private helper methods
-		//-----------------------------------------------------------------------------------------
-
-		private function get model():ComponentModel
-		{
-			return this.zugspitze.model as ComponentModel
-		}
-
-		private function get view():ComponentView
-		{
-			return this.zugspitze.view as ComponentView
 		}
 	}
 }

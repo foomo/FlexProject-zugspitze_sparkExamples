@@ -14,44 +14,39 @@
  * You should have received a copy of the GNU Lesser General Public License along with
  * the foomo Opensource Framework. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.foomo.zugspitze.examples.blank
+package org.foomo.zugspitze.examples.components.blank.controllers
 {
-	import org.foomo.zugspitze.examples.blank.controllers.ComponentController;
-	import org.foomo.zugspitze.examples.blank.models.ComponentModel;
-	import org.foomo.zugspitze.examples.blank.views.ComponentView;
-	import org.foomo.zugspitze.apps.ZugspitzeGroup;
-
-	import flash.events.Event;
-
-	import mx.events.FlexEvent;
+	import org.foomo.zugspitze.examples.components.blank.models.ComponentModel;
+	import org.foomo.zugspitze.examples.components.blank.views.ComponentView;
+	import org.foomo.zugspitze.core.ZugspitzeController;
 
 	/**
 	 * @link    http://www.foomo.org
 	 * @license http://www.gnu.org/licenses/lgpl.txt
 	 * @author  franklin <franklin@weareinteractive.com>
 	 */
-	public class Component extends ZugspitzeGroup
+	public class ComponentController extends ZugspitzeController
 	{
 		//-----------------------------------------------------------------------------------------
-		// ~ Constructor
+		// ~ Initialize application
 		//-----------------------------------------------------------------------------------------
 
-		public function Component()
+		public function initialize():void
 		{
-			super();
-			this.viewClass = ComponentView;
-			this.modelClass = ComponentModel;
-			this.controllerClass = ComponentController;
-			this.addEventListener(FlexEvent.CREATION_COMPLETE, this.creationCompleteHandler);
 		}
 
 		//-----------------------------------------------------------------------------------------
-		// ~ Private Eventhandler
+		// ~ Private helper methods
 		//-----------------------------------------------------------------------------------------
 
-		private function creationCompleteHandler(event:Event):void
+		private function get model():ComponentModel
 		{
-			ComponentController(this.controller).initialize();
+			return this.zugspitze.model as ComponentModel
+		}
+
+		private function get view():ComponentView
+		{
+			return this.zugspitze.view as ComponentView
 		}
 	}
 }

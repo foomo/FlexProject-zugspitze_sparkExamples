@@ -1,7 +1,7 @@
-import org.foomo.zugspitze.examples.blank.Component;
-import org.foomo.zugspitze.examples.blank.controllers.ComponentController;
-import org.foomo.zugspitze.examples.blank.models.ComponentModel;
-import org.foomo.zugspitze.examples.blank.views.ComponentView;
+import org.foomo.zugspitze.examples.components.blank.Component;
+import org.foomo.zugspitze.examples.components.blank.controllers.ComponentController;
+import org.foomo.zugspitze.examples.components.blank.models.ComponentModel;
+import org.foomo.zugspitze.examples.components.blank.views.ComponentView;
 import org.foomo.zugspitze.core.ZugspitzeView;
 
 import flash.display.DisplayObject;
