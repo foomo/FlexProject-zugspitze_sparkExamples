@@ -6,6 +6,7 @@
 	<description>Flex 4 Examples.</description>
 
 	<dependencies>
+		<id>org.foomo.flash</id>
 		<id>org.foomo.zugspitze.core</id>
 		<id>org.foomo.zugspitze.flex4</id>
 	</dependencies>
@@ -31,6 +32,16 @@
 			<package>org.foomo.zugspitze.examples.components.blank</package>
 			<sources>
 				<path>src/org/foomo/zugspitze/examples/components/blank</path>
+			</sources>
+		</application>
+
+		<application>
+			<id>org.foomo.zugspitze.flex4.examples.components.blank</id>
+			<name>Logger Component</name>
+			<description>Example component to show how to use the logger api.</description>
+			<package>org.foomo.zugspitze.examples.components.logger</package>
+			<sources>
+				<path>src/org/foomo/zugspitze/examples/components/logger</path>
 			</sources>
 		</application>
 

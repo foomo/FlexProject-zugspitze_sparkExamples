@@ -3,9 +3,37 @@
 	xmlns:fx="http://ns.adobe.com/mxml/2009"
 	xmlns:s="library://ns.adobe.com/flex/spark"
 	xmlns:blank="org.foomo.zugspitze.examples.components.blank.*"
+	xmlns:logger="org.foomo.zugspitze.examples.components.logger.*"
+	xmlns:mx="library://ns.adobe.com/flex/mx"
 	minWidth="955"
 	minHeight="600"
 	>
 	<fx:Style source="assets/css/Application.css"/>
-	<blank:Component/>
+	<s:TabBar id="tabs" left="8" y="2" dataProvider="{vs}"/>
+	<mx:ViewStack id="vs" width="95%" height="85%" left="8" y="23">
+		<s:NavigatorContent label="Blank"  width="100%" height="100%">
+			<s:BorderContainer width="100%" height="100%" borderWeight="2" cornerRadius="3" dropShadowVisible="true">
+				<s:backgroundFill>
+					<s:LinearGradient rotation="90">
+						<s:GradientEntry color="0xE2E2E2" />
+						<s:GradientEntry color="0x323232" />
+					</s:LinearGradient>
+				</s:backgroundFill>
+				<blank:Component/>
+			</s:BorderContainer>
+		</s:NavigatorContent>
+		<s:NavigatorContent label="Logger" width="100%" height="100%">
+			<s:BorderContainer width="100%" height="100%" borderWeight="2" cornerRadius="3" dropShadowVisible="true">
+				<s:backgroundFill>
+					<s:LinearGradient rotation="90">
+						<s:GradientEntry color="0xE2E2E2" />
+						<s:GradientEntry color="0x323232" />
+					</s:LinearGradient>
+				</s:backgroundFill>
+				<logger:Component/>
+			</s:BorderContainer>
+
+		</s:NavigatorContent>
+
+	</mx:ViewStack>
 </s:Application>
