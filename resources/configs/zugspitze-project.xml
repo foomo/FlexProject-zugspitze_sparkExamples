@@ -36,7 +36,7 @@
 		</application>
 
 		<application>
-			<id>org.foomo.zugspitze.flex4.examples.components.blank</id>
+			<id>org.foomo.zugspitze.flex4.examples.components.logger</id>
 			<name>Logger Component</name>
 			<description>Example component to show how to use the logger api.</description>
 			<package>org.foomo.zugspitze.examples.components.logger</package>
