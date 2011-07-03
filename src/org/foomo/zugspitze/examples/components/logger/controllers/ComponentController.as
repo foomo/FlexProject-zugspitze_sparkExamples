@@ -37,7 +37,7 @@ package org.foomo.zugspitze.examples.components.logger.controllers
 
 		public function initialize():void
 		{
-			this.model.setLoggingTargets([TraceTarget, TerminalTarget, ConsoleTarget], new <int>[0]);
+			this.model.setLoggingTargets([TerminalTarget, TraceTarget, ConsoleTarget], new <int>[0]);
 		}
 
 		public function setLogLevel(level:int):void
