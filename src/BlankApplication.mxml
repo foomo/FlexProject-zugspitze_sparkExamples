@@ -2,7 +2,7 @@
 <blank:Application
 	xmlns:fx="http://ns.adobe.com/mxml/2009"
 	xmlns:s="library://ns.adobe.com/flex/spark"
-	xmlns:blank="org.foomo.zugspitze.examples.applications.blank.*"
+	xmlns:blank="org.foomo.zugspitze.spark.applications.blank.*"
 	minWidth="955"
 	minHeight="600"
 	>

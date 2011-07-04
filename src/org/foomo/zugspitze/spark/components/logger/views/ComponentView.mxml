@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:VGroup
+	xmlns:fx="http://ns.adobe.com/mxml/2009"
+	xmlns:s="library://ns.adobe.com/flex/spark"
+	width="400"
+	height="300"
+	>
+	<fx:Script>
+		<![CDATA[
+			import mx.logging.LogEventLevel;
+
+			import org.foomo.logging.ConsoleTarget;
+			import org.foomo.logging.LogLevel;
+			import org.foomo.logging.TerminalTarget;
+			import org.foomo.logging.TraceTarget;
+			import org.foomo.utils.ArrayUtil;
+			import org.foomo.utils.ClassUtil;
+
+			//-----------------------------------------------------------------------------------------
+			// ~ Includes
+			//-----------------------------------------------------------------------------------------
+
+			include 'ViewInclude.as';
+		]]>
+	</fx:Script>
+	<fx:Declarations>
+
+		<fx:Component id="loggingTargetLitItemRenderer" className="LoggingTargetLitItemRenderer">
+			<s:ItemRenderer>
+				<s:Label text="{ClassUtil.getClassName(data)}">
+					<fx:Script>
+						<![CDATA[
+							import org.foomo.utils.ClassUtil;
+						]]>
+					</fx:Script>
+				</s:Label>
+			</s:ItemRenderer>
+
+		</fx:Component>
+	</fx:Declarations>
+
+	<s:Button label="» Log Debug" click="this.controller.logDebug()"/>
+	<s:Button label="» Log Info" click="this.controller.logInfo()"/>
+	<s:Button label="» Log Warning" click="this.controller.logWarning()"/>
+	<s:Button label="» Log Error" click="this.controller.logError()"/>
+	<s:Button label="» Log Fatal" click="this.controller.logFatal()"/>
+
+	<s:DropDownList id="logLevelSelector" change="this.controller.setLogLevel(this.logLevelSelector.selectedItem.value)" selectedIndex="0" labelField="name">
+		<s:ArrayList>
+			<fx:Object name="All" value="{LogEventLevel.ALL}"/>
+			<fx:Object name="Debug" value="{LogEventLevel.DEBUG}"/>
+			<fx:Object name="Info" value="{LogEventLevel.INFO}"/>
+			<fx:Object name="Warn" value="{LogEventLevel.WARN}"/>
+			<fx:Object name="Error" value="{LogEventLevel.ERROR}"/>
+			<fx:Object name="Fatal" value="{LogEventLevel.FATAL}"/>
+		</s:ArrayList>
+	</s:DropDownList>
+
+	<s:List
+		itemRenderer="{this.loggingTargetLitItemRenderer}"
+		dataProvider="{this.model.availableLoggingTargets}"
+		selectedIndices="@{this.model.enabledLoggingTargets}"
+		change="this.controller.updateLoggingTargets()"
+		allowMultipleSelection="true"
+		/>
+</s:VGroup>
