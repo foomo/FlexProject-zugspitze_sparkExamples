@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.foomo.org" xsi:schemaLocation="http://www.foomo.org http://www.foomo.org/foomo/modules/Foomo.Flash/schemas/project.xsd">
+	<id>org.foomo.zugspitze.soark.examples</id>
+	<group>org.foomo.zugspitze</group>
+	<type>Implementation Project</type>
+	<name>Flex (Spark) Examples</name>
+	<description>Flex (Spark) Examples.</description>
+	<exclude>false</exclude>
+	<dependencies>
+		<id>org.foomo.core</id>
+		<id>org.foomo.zugspitze.core</id>
+		<id>org.foomo.zugspitze.spark</id>
+	</dependencies>
+	<applications>
+		<application>
+			<id>org.foomo.zugspitze.spark.applications.blank</id>
+			<name>Blank Application</name>
+			<description>This is a blank application skeleton.</description>
+			<package>org.foomo.zugspitze.spark.applications.blank</package>
+			<sources>
+				<path>src/BlankApplication.mxml</path>
+				<path>src/assets/css/Application.css</path>
+				<path>src/org/foomo/zugspitze/spark/applications/blank</path>
+			</sources>
+		</application>
+		<application>
+			<id>org.foomo.zugspitze.spark.components.blank</id>
+			<name>Blank Component</name>
+			<description>This is a blank component skeleton.</description>
+			<package>org.foomo.zugspitze.spark.components.blank</package>
+			<sources>
+				<path>src/org/foomo/zugspitze/spark/components/blank</path>
+			</sources>
+		</application>
+		<application>
+			<id>org.foomo.zugspitze.spark.components.logger</id>
+			<name>Logger Component</name>
+			<description>Example component to show how to use the logger api.</description>
+			<package>org.foomo.zugspitze.spark.components.logger</package>
+			<sources>
+				<path>src/org/foomo/zugspitze/spark/components/logger</path>
+			</sources>
+		</application>
+	</applications>
+</config>
