@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.foomo.org" xsi:schemaLocation="http://www.foomo.org http://www.foomo.org/foomo/modules/Foomo.Flash/schemas/project.xsd">
-	<id>org.foomo.zugspitze.soark.examples</id>
+	<id>org.foomo.zugspitze.spark.examples</id>
 	<group>org.foomo.zugspitze</group>
 	<type>Implementation Project</type>
 	<name>Flex (Spark) Examples</name>
