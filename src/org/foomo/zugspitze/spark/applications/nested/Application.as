@@ -20,6 +20,7 @@ package org.foomo.zugspitze.spark.applications.nested
 
 	import mx.events.FlexEvent;
 
+	import org.foomo.zugspitze.events.ZugspitzeEvent;
 	import org.foomo.zugspitze.spark.applications.nested.controllers.ApplicationController;
 	import org.foomo.zugspitze.spark.applications.nested.models.ApplicationModel;
 	import org.foomo.zugspitze.spark.applications.nested.views.ApplicationView;
@@ -42,7 +43,7 @@ package org.foomo.zugspitze.spark.applications.nested
 			this.viewClass = ApplicationView;
 			this.modelClass = ApplicationModel;
 			this.controllerClass = ApplicationController;
-			this.addEventListener(FlexEvent.CREATION_COMPLETE, this.creationCompleteHandler);
+			this.addEventListener(ZugspitzeEvent.ZUGSPITZE_COMPLETE, this.zugspitzeCompleteHandler);
 		}
 
 		//-----------------------------------------------------------------------------------------
@@ -58,7 +59,7 @@ package org.foomo.zugspitze.spark.applications.nested
 		// ~ Private Eventhandler
 		//-----------------------------------------------------------------------------------------
 
-		private function creationCompleteHandler(event:Event):void
+		private function zugspitzeCompleteHandler(event:ZugspitzeEvent):void
 		{
 			ApplicationController(this.controller).initialize();
 		}
